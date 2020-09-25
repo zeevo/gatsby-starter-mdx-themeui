@@ -1,42 +1,24 @@
+/** @jsx jsx */
 import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
+import { jsx, NavLink } from "theme-ui";
+import ColorModeToggle from "./ColorModeToggle";
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: "rebeccapurple",
-      marginBottom: "1.45rem",
-    }}
-  >
-    <div
-      style={{
-        margin: "0 auto",
-        maxWidth: 724,
-        padding: "1.45rem 1.0875rem",
+function Header(props) {
+  return (
+    <header
+      sx={{
+        justifyContent: "space-between",
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        py: 2,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: "white",
-            textDecoration: "none",
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
-);
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: "",
-};
-
+      <Link to="/" sx={{ flex: 1 }}>
+        <NavLink sx={{ color: "text" }}>{props.title}</NavLink>
+      </Link>
+      <ColorModeToggle />
+    </header>
+  );
+}
 export default Header;

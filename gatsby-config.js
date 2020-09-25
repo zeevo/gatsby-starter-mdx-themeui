@@ -2,9 +2,10 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter MDX Theme-ui",
+    title: "Gatsby Starter MDX Theme UI",
     description: "Inspired by @chrisbiscardi, but with batteries included.",
     author: "@zeevosec",
+    footer: "All rights reserved.",
   },
   plugins: [
     {
@@ -30,6 +31,7 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-theme-ui",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

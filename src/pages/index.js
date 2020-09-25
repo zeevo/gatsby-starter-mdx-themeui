@@ -4,7 +4,8 @@ import Layout from "../components/Layout";
 import Image from "../components/Image";
 import SEO from "../components/SEO";
 
-import React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 
 function Index({ data }) {
   console.log(data);
@@ -15,7 +16,14 @@ function Index({ data }) {
         <div key={node.frontmatter.path}>
           <Link
             to={node.frontmatter.path}
-            style={{ marginBottom: ".5rem", textDecoration: "none" }}
+            sx={{
+              marginBottom: ".5rem",
+              textDecoration: "none",
+              color: "text",
+              "&:hover": {
+                color: "primary",
+              },
+            }}
           >
             <h2>
               {node.frontmatter.date} - {node.frontmatter.title}
@@ -23,7 +31,6 @@ function Index({ data }) {
           </Link>
         </div>
       ))}
-      <Image />
     </Layout>
   );
 }
