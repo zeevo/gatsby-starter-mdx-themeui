@@ -1,18 +1,22 @@
 import { graphql } from "gatsby";
+import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import { Link } from "gatsby";
 import React from "react";
 import Layout from "../components/Layout";
+
+const shortcodes = { Link }; // Provide common components here
 
 const Post = ({ data: { mdx: post } }) => {
   const { title } = post.frontmatter;
   const { body } = post;
   return (
-    <div>
-      <Layout>
-        <h1>{title}</h1>
-        <MDXRenderer>{body}</MDXRenderer>
-      </Layout>
-    </div>
+    <Layout>
+      <h1>{post.frontmatter.title}</h1>
+      <MDXProvider components={shortcodes}>
+        <MDXRenderer>{post.body}</MDXRenderer>
+      </MDXProvider>
+    </Layout>
   );
 };
 

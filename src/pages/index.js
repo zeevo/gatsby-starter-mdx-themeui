@@ -1,14 +1,14 @@
-import { Link } from "gatsby";
-
-import Layout from "../components/Layout";
-import Image from "../components/Image";
-import SEO from "../components/SEO";
-
 /** @jsx jsx */
+import { Link } from "gatsby";
 import { jsx } from "theme-ui";
 
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+
+import { Vega } from "react-vega";
+
 function Index({ data }) {
-  console.log(data);
+  console.log(Vega);
   return (
     <Layout>
       <SEO title="Home" />

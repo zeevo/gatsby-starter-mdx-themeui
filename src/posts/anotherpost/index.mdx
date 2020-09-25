@@ -1,14 +1,14 @@
 ---
 path: "/2020/01/02/hello-world"
 date: "2020/01/02"
-title: "Hello World again"
-summary: "hello world again"
+title: "VegaJS Example"
+summary: "VegaJS Example"
 ---
 
 import { Link } from "gatsby";
 import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
+import Vega from "../../components/Vega";
+import spec from "./spec.json";
 
-<SEO title="Page two" />
-
-hello world again
+<Vega spec={spec} />
