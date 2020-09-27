@@ -1,9 +1,9 @@
-# Gatsby Starter MDX Basic
+# Gatsby Starter MDX Theme UI
 
-View this starter [live on Netlify](https://gatsby-starter-mdx-basic.netlify.com/)
+View this starter [live on Netlify](https://gatsby-starter-mdx-themeui.netlify.com/)
 
 This starter build MDX support into the
-[gatsby-default-starter](https://github.com/gatsbyjs/gatsby-starter-default). Its
+[gatsby-default-starter](https://github.com/zeevosec/gatsby-starter-mdx-themeui). Its
 README also applies here.
 
 1. Create a new Gatsby site using this starter
@@ -23,5 +23,3 @@ yarn
 ```sh
 yarn develop
 ```
-
-4. Edit Page 2 in `src/pages/page-2.mdx`
