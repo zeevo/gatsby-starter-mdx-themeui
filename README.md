@@ -1,4 +1,4 @@
-# Gatsby Starter MDX Basic
+# Gatsby Starter MDX Theme UI
 
 View this starter [live on Netlify](https://gatsby-starter-mdx-basic.netlify.com/)
 

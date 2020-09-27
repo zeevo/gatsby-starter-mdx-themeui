@@ -2,13 +2,7 @@ import React from "react";
 import { Vega } from "react-vega";
 
 function VegaWrapper(props) {
-  console.log("here");
-  console.log("here");
-  console.log("here");
-  console.log("here");
-  console.log("here");
-  console.log(Vega);
-  return <XVega {...props} />;
+  return <Vega {...props} />;
 }
 
 export default VegaWrapper;
